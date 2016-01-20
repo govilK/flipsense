@@ -67,28 +67,9 @@ Online Shopping India Mobile, Cameras, Lifestyle &amp; more Online @ Flipkart.co
     </script>
 </head>
 <body class="HomePage new-branding">
-<script>
-function redirect() {
-    var query;
-    query = document.getElementById("fk-top-search-box").value;
-    
-    switch (query) {
-        case "sarees":
-            window.location.replace("Sarees.html");
-            break;
-        case "handicraft":
-            window.location.replace("http://www.flipkart.com/search?q=jeans&as=off&as-show=on&otracker=start");
-            break;
-        case "jeans":
-            window.location.replace("jeans.html");
-            break;
-        default:
-                //window.alert(query);
-            window.location.replace("http://www.flipkart.com/");
-    }
-    return false;
-}
-</script>
+
+<script src="redirectScript.js" type="text/javascript"></script>
+
 <div class="newMenu fkart fksk-body line homepg">
 <script type="text/javascript">
 var img_onload=function(a){},img_onerror=function(a){a=a||this;if(null==a.getAttribute("data-retry")&&a.getAttribute("data-error-url")){a.setAttribute("data-retry","true");var c=a.src;a.src=a.getAttribute("data-error-url");a.alt="error";if(a.getAttribute("data-logit")){var b={};b.pid=a.getAttribute("data-pid")||"";b.size=a.getAttribute("data-imagesize")||"";b.page=window.PAGE_NAME||"";b.url=c;a="/ajaxlog/errorImageLog";var c=[],d;for(d in b)c.push(d+"="+encodeURIComponent(b[d]));a=a+"?"+c.join("&");
