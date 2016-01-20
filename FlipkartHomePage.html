@@ -70,20 +70,20 @@ Online Shopping India Mobile, Cameras, Lifestyle &amp; more Online @ Flipkart.co
 <script>
 function redirect() {
     var query;
-    query = document.getElementById("fk-header-search-form").value;
+    query = document.getElementById("fk-top-search-box").value;
     
     switch (query) {
         case "sarees":
-            window.location.replace("/Users/ankit.mishra/code/flipsense/SellerStorePage.html");
+            window.location.replace("/Users/amitkumar.j/Desktop/Ideathon/flipsense/Sarees.html");
             break;
         case "handicraft":
-            window.location.replace("http://www.flipkart.com/search?q=handicraft&as=off&as-show=on&otracker=start");
-            break;
-        case "jeans":
             window.location.replace("http://www.flipkart.com/search?q=jeans&as=off&as-show=on&otracker=start");
             break;
+        case "jeans":
+            window.location.replace("/Users/amitkumar.j/Desktop/Ideathon/flipsense/jeans.html");
+            break;
         default:
-                window.alert(query);
+                //window.alert(query);
             window.location.replace("http://www.flipkart.com/");
     }
     return false;
