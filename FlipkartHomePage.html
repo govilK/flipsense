@@ -7,6 +7,19 @@
 <title>
 Online Shopping India Mobile, Cameras, Lifestyle &amp; more Online @ Flipkart.com
 </title>
+
+    <script type="text/javascript">
+
+        var slideimages = new Array() // create new array to preload images
+        slideimages[0] = new Image() // create new instance of image object
+        slideimages[0].src = "./FlipkartHomePage_files/20160120-160001-20160119-231151-makemytrip.png" // set image src property to image path, preloading image in the process
+        slideimages[1] = new Image()
+        slideimages[1].src = "./FlipkartHomePage_files/20160120-160214-egv.png"
+        slideimages[2] = new Image()
+        slideimages[2].src = "./FlipkartHomePage_files/20160120-160351-eoss.png"
+
+    </script>
+
 <!--
     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
     -->
@@ -7759,7 +7772,29 @@ var img_onload=function(a){},img_onerror=function(a){a=a||this;if(null==a.getAtt
                                 <div class="section rhs-img-module" data-tracking-id="imgModule">
         <a href="s1.html" data-image="http://img5a.flixcart.com/www/promos/new/20160120-160001-20160119-231151-makemytrip.png " data-title="Flipkart" data-url="/mmt-tnc?otracker=hp_imgModule_RHS2" data-vertical="PROMOTIONS" class="fk-display-block line " data-tracking-id="RHS1">
 
-                <img src="./FlipkartHomePage_files/20160120-160001-20160119-231151-makemytrip.png" alt="Flipkart">
+                <img src="./FlipkartHomePage_files/20160120-160001-20160119-231151-makemytrip.png" id="slide" alt="Flipkart"/>
+
+            <script type="text/javascript">
+
+                //variable that will increment through the images
+                var step=0
+
+                function slideit(){
+                    //if browser does not support the image object, exit.
+                    if (!document.images)
+                        return
+                    document.getElementById('slide').src = slideimages[step].src
+                    if (step<2)
+                        step++
+                    else
+                        step=0
+                    //call function "slideit()" every 2.5 seconds
+                    setTimeout("slideit()",2500)
+                }
+
+                slideit()
+
+            </script>
         </a>
     </div>
     <div class="section rhs-img-module" data-tracking-id="imgModule">
