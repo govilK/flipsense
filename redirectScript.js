@@ -6,14 +6,14 @@ function redirect() {
         case "sarees":
             window.location.replace("Sarees.html");
             break;
-        case "handicraft":
-            window.location.replace("http://www.flipkart.com/search?q=jeans&as=off&as-show=on&otracker=start");
+        case "handicrafts":
+            window.location.replace("FlipkartHomePage.html");
             break;
         case "jeans":
             window.location.replace("jeans.html");
             break;
         default:
-            window.location.replace("http://www.flipkart.com/");
+            window.location.replace("FlipkartHomePage.html");
     }
     return false;
 }
