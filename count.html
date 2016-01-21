@@ -1,0 +1,71 @@
+<head>
+<meta http-equiv="refresh" content="2">
+</head>
+<div>
+<script type="text/javascript">
+function callback(arr) {
+   console.log(arr);
+    var out = "";
+    var i;
+    for(i = 0; i < arr.length; i++) {
+      document.getElementById("s1").innerHTML = "Seller: " + arr[0].sellerName;
+      document.getElementById("s1v").innerHTML = "Views: " + arr[0].views;
+      document.getElementById("s1e").innerHTML = "Engagement: " +    arr[0].engagement;
+
+
+      document.getElementById("s2").innerHTML = "Seller: " + arr[1].sellerName;
+      document.getElementById("s2v").innerHTML = "Views: " + arr[1].views;
+      document.getElementById("s2e").innerHTML = "Engagement: " +   arr[1].engagement;
+    }
+}
+</script>
+
+
+
+
+<h1> <div id="s1"></div></h1>
+<h2><div id="s1v"></div>
+<div id="s1e"></div>
+</div></h2>
+
+<br>
+<br>
+<div>
+<h1> <div id="s2"></div>   </h1>
+<h2><div id="s2v"></div>
+ <div id="s2e"></div>
+</div></h2>
+
+<div id="count"></div>
+
+
+
+
+<script>
+
+var url = "http://172.20.217.216:8080/sellerDls";
+var JSElement = document.createElement('script');
+    console.log(url);
+    JSElement.src=url;
+    console.log(JSElement.src);
+    document.getElementsByTagName('head')[0].appendChild(JSElement);
+       // console.log("Getting Response for Url= " + url);
+
+
+
+    // console.log(JSElement);
+
+// var xmlhttp = new XMLHttpRequest();
+
+
+// xmlhttp.onreadystatechange = function() {
+//     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+//         var myArr = JSON.parse(xmlhttp.responseText);
+//         callback(myArr);
+//     }
+// };
+// xmlhttp.open("GET", url, true);
+// xmlhttp.send();
+
+
+</script>
